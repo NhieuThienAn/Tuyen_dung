@@ -1,0 +1,14 @@
+.price-filter {
+    padding: 0.5rem 1rem;
+    border: 1.5px solid #dbeafe;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    margin-left: 1rem;
+    transition: border 0.2s;
+
+    &:focus {
+        border-color: var(--primary);
+        outline: none;
+    }
+}

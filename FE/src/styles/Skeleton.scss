@@ -1,0 +1,54 @@
+.skeleton-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.skeleton-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: pulse 1.2s infinite ease-in-out;
+}
+
+.skeleton-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: #e3e8ee;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.skeleton-line {
+    height: 14px;
+    background: #e3e8ee;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    width: 80%;
+
+    &.short {
+        width: 40%;
+    }
+
+    &.long {
+        width: 95%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

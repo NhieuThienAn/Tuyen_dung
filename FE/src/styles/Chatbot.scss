@@ -1,0 +1,108 @@
+.chatbot {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    z-index: 3000;
+
+    &-toggle {
+        background: var(--primary);
+        color: #fff;
+        border-radius: 50%;
+        width: 52px;
+        height: 52px;
+        font-size: 2rem;
+        border: none;
+        box-shadow: 0 2px 12px rgba(45, 108, 223, 0.18);
+        cursor: pointer;
+        transition: background 0.2s;
+
+        &:hover {
+            background: #174a8b;
+        }
+    }
+
+    &-window {
+        position: absolute;
+        bottom: 60px;
+        right: 0;
+        width: 320px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(45, 108, 223, 0.18);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        animation: chatbot-in 0.2s;
+    }
+
+    &-messages {
+        max-height: 260px;
+        overflow-y: auto;
+        margin-bottom: 0.7rem;
+
+        .msg {
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.98rem;
+
+            &.bot {
+                background: #f5f8fa;
+                color: #2d6cdf;
+                align-self: flex-start;
+            }
+
+            &.user {
+                background: #e6f7ff;
+                color: #333;
+                align-self: flex-end;
+            }
+        }
+    }
+
+    &-input-row {
+        display: flex;
+        gap: 0.5rem;
+
+        input {
+            flex: 1;
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            border: 1.5px solid #dbeafe;
+            font-size: 1rem;
+
+            &:focus {
+                border-color: var(--primary);
+                outline: none;
+            }
+        }
+
+        button {
+            background: var(--primary);
+            color: #fff;
+            border-radius: 8px;
+            padding: 0.4rem 1rem;
+            font-size: 1rem;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+
+            &:hover {
+                background: #174a8b;
+            }
+        }
+    }
+}
+
+@keyframes chatbot-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

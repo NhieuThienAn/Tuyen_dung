@@ -1,0 +1,47 @@
+.main-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+    .brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #2d6cdf;
+    }
+
+    nav a {
+        margin-left: 1.5rem;
+        color: #222;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+
+        &:hover {
+            color: #2d6cdf;
+        }
+    }
+}
+
+.main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: #f7f7f7;
+    color: #888;
+    font-size: 0.95rem;
+    margin-top: auto;
+}
+
+main {
+    flex: 1;
+    padding: 2rem 0;
+    background: #f5f8fa;
+}
